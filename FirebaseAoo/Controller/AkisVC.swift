@@ -14,24 +14,24 @@ class AkisVC: UIViewController{
     
     @IBOutlet var tableView: UITableView!
     
-    
     var postuYukleyenKisiArray = [String]()
     var tagsArray = [String]()
     var postYorumuArray = [String]()
     var imageURLArray = [String]()
     var likeArray = [Int]()
     var dateArray = [String]()
+    var documentArray = [String]()
+    
+    let db = Firestore.firestore()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = self
-        
-        dataGetir()
-        
-        ucnoktafunc()
-    }
+        dataGetir()    }
+    
+    
         
     
 }
@@ -50,31 +50,9 @@ extension AkisVC :  UITableViewDelegate, UITableViewDataSource
         cell.begeniTF.text = String(likeArray[indexPath.row])
         cell.commentTF.text = postYorumuArray[indexPath.row]
         cell.uploadView.sd_setImage(with: URL(string: imageURLArray[indexPath.row]), placeholderImage: UIImage(named: "upload"))
-        cell.ucnokta.isUserInteractionEnabled = true
-        let ucnokta = UITapGestureRecognizer(target: self, action: #selector(ucnoktafunc))
-        cell.ucnokta.addGestureRecognizer(ucnokta)
+        cell.documentIDLabel.text = documentArray[indexPath.row]
         return cell
         
-    }
-    
-    @objc func ucnoktafunc()
-    {
-        let alert = UIAlertController(title: "TITLE", message: "MESSAGE", preferredStyle: UIAlertController.Style.alert)
-        let delete = UIAlertAction(title: "Delete", style: UIAlertAction.Style.cancel)
-        {
-            action in
-            
-            print("Delete")
-        }
-        let update = UIAlertAction(title: "Update", style: UIAlertAction.Style.default)
-        {
-            action in
-            
-            print("Update")
-        }
-        alert.addAction(delete)
-        alert.addAction(update)
-        self.present(alert, animated: true, completion: nil)
     }
     
     func dataGetir()
@@ -96,9 +74,12 @@ extension AkisVC :  UITableViewDelegate, UITableViewDataSource
                     self.imageURLArray.removeAll(keepingCapacity: false)
                     self.postYorumuArray.removeAll(keepingCapacity: false)
                     self.likeArray.removeAll(keepingCapacity: false)
+                    self.documentArray.removeAll(keepingCapacity: false)
                     
                     for document in snapshot!.documents
                     {
+                        let documentID = document.documentID
+                        self.documentArray.append(documentID)
 
                         if let postuYukleyenKisi = document.get("postuYukleyenKisi") as? String
                         {

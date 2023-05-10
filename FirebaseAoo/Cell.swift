@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class Cell: UITableViewCell {
 
@@ -15,10 +16,18 @@ class Cell: UITableViewCell {
     @IBOutlet var commentTF: UITextView!
     @IBOutlet var secenekler: UIImageView!
     @IBOutlet var ucnokta: UIImageView!
-    
+    @IBOutlet var documentIDLabel: UILabel!
     
     
     @IBAction func likebuttonclicked(_ sender: Any) {
+        
+        let db = Firestore.firestore()
+        
+        if let likesayisi = Int(begeniTF.text!)
+        {
+            let likeartir = ["like" : likesayisi + 1] as [String : Any]
+            db.collection("Posts").document(documentIDLabel.text!).setData(likeartir, merge: true)
+        }
         
     }
     
