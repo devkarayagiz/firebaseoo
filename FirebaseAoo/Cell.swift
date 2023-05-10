@@ -14,14 +14,15 @@ class Cell: UITableViewCell {
     @IBOutlet var begeniTF: UILabel!
     @IBOutlet var commentTF: UITextView!
     @IBOutlet var secenekler: UIImageView!
-    
+    @IBOutlet var ucnokta: UIImageView!
     
     
     
     @IBAction func likebuttonclicked(_ sender: Any) {
         
-        print("test")
     }
+    
+    
     
     
     

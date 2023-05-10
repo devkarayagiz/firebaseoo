@@ -29,6 +29,8 @@ class AkisVC: UIViewController{
         tableView.dataSource = self
         
         dataGetir()
+        
+        ucnoktafunc()
     }
         
     
@@ -48,8 +50,31 @@ extension AkisVC :  UITableViewDelegate, UITableViewDataSource
         cell.begeniTF.text = String(likeArray[indexPath.row])
         cell.commentTF.text = postYorumuArray[indexPath.row]
         cell.uploadView.sd_setImage(with: URL(string: imageURLArray[indexPath.row]), placeholderImage: UIImage(named: "upload"))
+        cell.ucnokta.isUserInteractionEnabled = true
+        let ucnokta = UITapGestureRecognizer(target: self, action: #selector(ucnoktafunc))
+        cell.ucnokta.addGestureRecognizer(ucnokta)
         return cell
         
+    }
+    
+    @objc func ucnoktafunc()
+    {
+        let alert = UIAlertController(title: "TITLE", message: "MESSAGE", preferredStyle: UIAlertController.Style.alert)
+        let delete = UIAlertAction(title: "Delete", style: UIAlertAction.Style.cancel)
+        {
+            action in
+            
+            print("Delete")
+        }
+        let update = UIAlertAction(title: "Update", style: UIAlertAction.Style.default)
+        {
+            action in
+            
+            print("Update")
+        }
+        alert.addAction(delete)
+        alert.addAction(update)
+        self.present(alert, animated: true, completion: nil)
     }
     
     func dataGetir()
