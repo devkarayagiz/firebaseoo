@@ -15,6 +15,8 @@ class UploadVC: UIViewController, UIImagePickerControllerDelegate & UINavigation
     @IBOutlet var descriptions: UITextField!
     @IBOutlet var tags: UITextField!
     
+    // MARK: - ViewDidLoad
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,6 +24,8 @@ class UploadVC: UIViewController, UIImagePickerControllerDelegate & UINavigation
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(resimsec))
         uploadView.addGestureRecognizer(gestureRecognizer)
     }
+    
+    // MARK: - Resim Seç
     
     @objc func resimsec()
     {
@@ -39,7 +43,7 @@ class UploadVC: UIViewController, UIImagePickerControllerDelegate & UINavigation
     }
     
 
-
+    // MARK: - Upload
     @IBAction func upload(_ sender: Any) {
         
        

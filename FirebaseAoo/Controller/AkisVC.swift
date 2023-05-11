@@ -12,6 +12,8 @@ import SDWebImage
 
 class AkisVC: UIViewController{
     
+    // MARK: - Diziler
+    
     @IBOutlet var tableView: UITableView!
     
     var postuYukleyenKisiArray = [String]()
@@ -23,6 +25,8 @@ class AkisVC: UIViewController{
     var documentArray = [String]()
     
     let db = Firestore.firestore()
+    
+    // MARK: - ViewDidLoad
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +40,7 @@ class AkisVC: UIViewController{
     
 }
 
+// MARK: - TableView
 extension AkisVC :  UITableViewDelegate, UITableViewDataSource
 {
     
@@ -54,6 +59,8 @@ extension AkisVC :  UITableViewDelegate, UITableViewDataSource
         return cell
         
     }
+    
+    // MARK: - DataGetir Fonksiyonu
     
     func dataGetir()
     {

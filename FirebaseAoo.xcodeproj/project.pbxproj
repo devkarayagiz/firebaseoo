@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA15361A2A0CE45A00F54D4A /* KayitOlVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1536192A0CE45A00F54D4A /* KayitOlVC.swift */; };
 		DACDE4E52A0A53F500508809 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACDE4E42A0A53F500508809 /* Cell.swift */; };
 		DACDE4E82A0A569500508809 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = DACDE4E72A0A569500508809 /* SDWebImage */; };
 		DADEE8012A03C19B00AF2445 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADEE8002A03C19B00AF2445 /* AppDelegate.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DA1536192A0CE45A00F54D4A /* KayitOlVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KayitOlVC.swift; sourceTree = "<group>"; };
 		DACDE4E42A0A53F500508809 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		DADEE7FD2A03C19B00AF2445 /* FirebaseAoo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseAoo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DADEE8002A03C19B00AF2445 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				DAFA0EDB2A03CFA5004ECF5C /* AkisVC.swift */,
 				DAFA0EDD2A03D676004ECF5C /* AyarlarVC.swift */,
 				DAFA0EDF2A03D75F004ECF5C /* UploadVC.swift */,
+				DA1536192A0CE45A00F54D4A /* KayitOlVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DADEE8052A03C19B00AF2445 /* ViewController.swift in Sources */,
+				DA15361A2A0CE45A00F54D4A /* KayitOlVC.swift in Sources */,
 				DAFA0EDC2A03CFA5004ECF5C /* AkisVC.swift in Sources */,
 				DAFA0EDA2A03C944004ECF5C /* Alerts.swift in Sources */,
 				DAFA0EDE2A03D676004ECF5C /* AyarlarVC.swift in Sources */,

@@ -31,8 +31,7 @@ class ViewController: UIViewController {
     
     @IBAction func uyeOl(_ sender: Any) {
         
-        Auth.auth().createUser(withEmail: email.text!, password: parola.text!)
-        alertVer(baslik: "BAŞARILI", icerik: "Kaydınız başarıyla gerçekleştirildi!", buttonTitle: "Tamam")
+        performSegue(withIdentifier: "kayitolSegue", sender: nil)
     }
     
 }
