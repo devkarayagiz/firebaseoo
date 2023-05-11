@@ -28,9 +28,9 @@ class KayitOlVC: UIViewController, UIImagePickerControllerDelegate & UINavigatio
     
     // MARK: - Kayıt Ol
     @IBAction func kayitOl(_ sender: Any) {
+        
         upload()
-        Auth.auth().createUser(withEmail: emailTF.text!, password: parolaTF.text!)
-        alertVer(baslik: "BAŞARILI", icerik: "Kaydınız başarıyla gerçekleştirildi!", buttonTitle: "Tamam")
+        
     }
     
     // MARK: - Giriş Yap
@@ -61,6 +61,7 @@ class KayitOlVC: UIViewController, UIImagePickerControllerDelegate & UINavigatio
     
     func upload()
     {
+        Auth.auth().createUser(withEmail: self.emailTF.text!, password: self.parolaTF.text!)
         let storage = Storage.storage()
                 let referance = storage.reference()
                 
@@ -97,9 +98,12 @@ class KayitOlVC: UIViewController, UIImagePickerControllerDelegate & UINavigatio
                                             self.alertVer(baslik: "HATA", icerik: error!.localizedDescription, buttonTitle: "Tamam")
                                         }
                                         
+                                        
                                     })
                                 }
                             }
+                            //self.alertVer(baslik: "BAŞARILI", icerik: "Kaydınız başarıyla gerçekleştirildi!", buttonTitle: "Tamam")
+                            self.performSegue(withIdentifier: "kayitOlTabbarSegue", sender: nil)
                         }
                     }
                 }
