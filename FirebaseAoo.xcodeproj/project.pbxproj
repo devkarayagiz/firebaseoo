@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		DA15361A2A0CE45A00F54D4A /* KayitOlVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA1536192A0CE45A00F54D4A /* KayitOlVC.swift */; };
+		DA3C9E602A0DE5D800E3729C /* ProfilCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3C9E5F2A0DE5D800E3729C /* ProfilCell.swift */; };
+		DA3F38032A166981002A2683 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3F38022A166981002A2683 /* Post.swift */; };
+		DA8EB7F42A0E6D9E0054B6AF /* PostDetayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA8EB7F32A0E6D9E0054B6AF /* PostDetayVC.swift */; };
 		DACDE4E52A0A53F500508809 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DACDE4E42A0A53F500508809 /* Cell.swift */; };
 		DACDE4E82A0A569500508809 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = DACDE4E72A0A569500508809 /* SDWebImage */; };
 		DADEE8012A03C19B00AF2445 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DADEE8002A03C19B00AF2445 /* AppDelegate.swift */; };
@@ -30,6 +33,9 @@
 
 /* Begin PBXFileReference section */
 		DA1536192A0CE45A00F54D4A /* KayitOlVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KayitOlVC.swift; sourceTree = "<group>"; };
+		DA3C9E5F2A0DE5D800E3729C /* ProfilCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilCell.swift; sourceTree = "<group>"; };
+		DA3F38022A166981002A2683 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		DA8EB7F32A0E6D9E0054B6AF /* PostDetayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetayVC.swift; sourceTree = "<group>"; };
 		DACDE4E42A0A53F500508809 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		DADEE7FD2A03C19B00AF2445 /* FirebaseAoo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseAoo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DADEE8002A03C19B00AF2445 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +100,7 @@
 				DADEE80B2A03C19D00AF2445 /* LaunchScreen.storyboard */,
 				DADEE80E2A03C19D00AF2445 /* Info.plist */,
 				DAFA0ED42A03C5DE004ECF5C /* GoogleService-Info.plist */,
+				DA3C9E5F2A0DE5D800E3729C /* ProfilCell.swift */,
 			);
 			path = FirebaseAoo;
 			sourceTree = "<group>";
@@ -101,6 +108,7 @@
 		DADEE8142A03C23900AF2445 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				DA3F38022A166981002A2683 /* Post.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -120,6 +128,7 @@
 				DAFA0EDD2A03D676004ECF5C /* AyarlarVC.swift */,
 				DAFA0EDF2A03D75F004ECF5C /* UploadVC.swift */,
 				DA1536192A0CE45A00F54D4A /* KayitOlVC.swift */,
+				DA8EB7F32A0E6D9E0054B6AF /* PostDetayVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -218,11 +227,14 @@
 			files = (
 				DADEE8052A03C19B00AF2445 /* ViewController.swift in Sources */,
 				DA15361A2A0CE45A00F54D4A /* KayitOlVC.swift in Sources */,
+				DA8EB7F42A0E6D9E0054B6AF /* PostDetayVC.swift in Sources */,
+				DA3F38032A166981002A2683 /* Post.swift in Sources */,
 				DAFA0EDC2A03CFA5004ECF5C /* AkisVC.swift in Sources */,
 				DAFA0EDA2A03C944004ECF5C /* Alerts.swift in Sources */,
 				DAFA0EDE2A03D676004ECF5C /* AyarlarVC.swift in Sources */,
 				DADEE8012A03C19B00AF2445 /* AppDelegate.swift in Sources */,
 				DACDE4E52A0A53F500508809 /* Cell.swift in Sources */,
+				DA3C9E602A0DE5D800E3729C /* ProfilCell.swift in Sources */,
 				DADEE8032A03C19B00AF2445 /* SceneDelegate.swift in Sources */,
 				DAFA0EE02A03D75F004ECF5C /* UploadVC.swift in Sources */,
 			);
